@@ -20,9 +20,9 @@ class SearchPage(BasePage):
         self.element_is_visible(Locators.USD_CURRENCY).click()
 
     def find_current_currency(self):
-        current_currency = self.element_is_visible(Locators.CURRENT_CURRENCY)
+        current_currency = self.elements_are_visible(Locators.CURRENT_CURRENCY)
         return current_currency
 
     def change_sorting_hl(self):
         self.element_is_visible(Locators.SORT_BUTTON).click()
-        self.element_is_visible(Locators.SORT_HL).click()
+        self.elements_are_visible(Locators.SORT_HL)[4].click()

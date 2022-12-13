@@ -2,9 +2,9 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators:
-    CURRENT_CURRENCY = (By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[2]/div/span[2]')
+    CURRENT_CURRENCY = (By.CSS_SELECTOR, 'div.currency-selector span')
     ITEMS_CURRENCY = (By.CLASS_NAME, 'price')
-    CURRENCY_BUTTON = (By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[2]/div/a')
-    USD_CURRENCY = (By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[2]/div/ul/li[3]/a')
+    CURRENCY_BUTTON = (By.CSS_SELECTOR, 'div.currency-selector a')
+    USD_CURRENCY = (By.CSS_SELECTOR, "a[title='Доллар США']")
 
 

@@ -18,14 +18,14 @@ class TestMainPage:
 
     def test_currency(self, driver):
         """Makes sure that choosen and actual currencies are equal"""
-        current_currency = self.main_page.find_current_currency().text[-1]
+        current_currency = self.main_page.find_current_currency()[1].text[-1]
         item_currency = self.main_page.find_item_currency().text[-1]
         assert current_currency == item_currency, 'Pages currency isn`t equal to items!'
 
     def test_currency_usd(self, driver):
         """Makes sure that choosen currency is USD"""
         self.main_page.change_currency_to_usd()
-        current_currency = self.main_page.find_current_currency().text[-1]
+        current_currency = self.main_page.find_current_currency()[1].text[-1]
         assert current_currency == '$', 'Pages currency isn`t equal to USD!'
 
 

@@ -22,7 +22,7 @@ class TestSearchPage:
     def test_searchpages_currency(self,driver):
         """Makes sure that currency is equal to USD"""
         self.search_page.change_currency_to_usd()
-        current_currency = self.search_page.find_current_currency().text[-1]
+        current_currency = self.search_page.find_current_currency()[1].text[-1]
         assert current_currency == '$', 'Pages currency isn`t equal to USD!'
 
     def test_sortresults_hl(self,driver):
