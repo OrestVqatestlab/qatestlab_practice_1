@@ -19,18 +19,3 @@ class MainPage(BasePage):
     def change_currency_to_usd(self):
         self.element_is_visible(Locators.CURRENCY_BUTTON).click()
         self.element_is_visible(Locators.USD_CURRENCY).click()
-
-    def search(self):
-        self.element_is_visible(Locators.SEARCH_FIELD).send_keys('dress')
-        self.element_is_visible(Locators.SEARCH_BUTTON).click()
-
-    def get_expected_quantity(self):
-        return self.element_is_visible(Locators.GOODS_QUANTITY)
-
-    def get_items(self):
-        items = self.elements_are_visible(Locators.ITEMS)
-        return items
-
-    def change_sorting_hl(self):
-        self.element_is_visible(Locators.SORT_BUTTON).click()
-        self.element_is_visible(Locators.SORT_HL).click()
