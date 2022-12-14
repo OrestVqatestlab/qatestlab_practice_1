@@ -1,3 +1,6 @@
+import allure
+from allure_commons.types import AttachmentType
+
 from selenium.webdriver.support.ui import WebDriverWait as Wait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -15,4 +18,5 @@ class BasePage:
 
     def elements_are_visible(self, locator, timeout=5):
         return Wait(self.driver, timeout).until(EC.visibility_of_all_elements_located(locator))
+
 
