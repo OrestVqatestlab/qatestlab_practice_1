@@ -2,6 +2,7 @@ __pycache__
 *__pycache__*
 .idea
 .pytest_cache
-reports
+allure-reports
+allure-results
 *.idea*
 *.pyc
