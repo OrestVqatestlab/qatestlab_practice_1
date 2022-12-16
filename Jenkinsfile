@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('venv') {
       steps {
-        sh 'pytest --version'
+        sh 'source venv/bin/activate'
       }
     }
     stage('hello') {
