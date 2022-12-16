@@ -1,9 +1,10 @@
 pipeline {
-  agent any
+  agent {
+      docker { image '3.10.9-slim-buster' }
+  }
   stages {
     stage('python') {
       steps {
-        sh 'apk add python3'
         sh 'python3 -m venv .venv'
         sh 'source .venv/bin/activate'
       }
