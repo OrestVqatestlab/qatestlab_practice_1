@@ -25,3 +25,8 @@ services:
     image: "selenium/standalone-chrome"
     ports:
       - "4444:4444"
+
+  jenkins:
+    image: "jenkins/jenkins"
+    ports:
+      - "8080:8080"
