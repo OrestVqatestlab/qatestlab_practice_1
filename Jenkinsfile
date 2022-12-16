@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('venv') {
       steps {
+        sh 'pip install virtualenv'
         sh 'pip install -r requirements.txt'
       }
     }
