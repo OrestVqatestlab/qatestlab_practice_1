@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('venv') {
       steps {
-        sh 'source venv/bin/activate'
+        sh 'pip install -r requirements.txt'
       }
     }
     stage('hello') {
